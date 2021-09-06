@@ -2,9 +2,9 @@ import NProgress from "nprogress";
 import { Switch, Route } from "react-router-dom";
 import { Suspense, lazy, useEffect, useMemo, FC, Fragment } from "react";
 // components
-import LoadingScreen from "../components/LoadingScreen";
+import LoadingScreen from "components/LoadingScreen";
 // layouts
-import HomeLayout from "../layouts/home";
+import HomeLayout from "layouts/home";
 
 function RouteProgress(props: any) {
   NProgress.configure({

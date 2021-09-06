@@ -1,7 +1,7 @@
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 // routes
-import routes, { renderRoutes } from "./routes";
+import routes, { renderRoutes } from "routes";
 // ----------------------------------------
 
 const history = createBrowserHistory();
