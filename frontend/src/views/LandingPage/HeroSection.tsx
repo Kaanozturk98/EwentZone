@@ -10,7 +10,7 @@ export default function HeroSection() {
         loop
         muted
         className="top-1/2 left-1/2 object-cover -z-10"
-        style={{ width: "100vw", height: "30vw", minHeight: "40vh" }}
+        style={{ width: "100vw", height: "30vw", minHeight: "50vh" }}
       >
         <source src={Video} type="video/mp4" />
       </video>
@@ -19,10 +19,10 @@ export default function HeroSection() {
       }
       <div className="h-full w-auto z-10 absolute top-0 inset-1/10 flex items-center">
         <div className="">
-          <div className="text-white text-4xl text-bold">
+          <div className="text-white text-4xl font-bold">
             It’s time to unwind
           </div>
-          <div className="text-white text-xl text-bold mt-8">
+          <div className="text-white text-xl font-bold mt-8">
             Enjoy or gift 2,000+ artisan workshops and craft kits
           </div>
           <div className={"rounded-lg bg-gray-100 p-3 mt-8 flex gap-x-4"}>
