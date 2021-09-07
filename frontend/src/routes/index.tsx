@@ -62,7 +62,7 @@ const routes: { exact: boolean; path: string; layout: FC; component: FC }[] = [
     exact: true,
     path: "/",
     layout: HomeLayout,
-    component: lazy(() => import("../views/LandingPage")),
+    component: lazy(() => import("views/LandingPage")),
   },
 ];
 
