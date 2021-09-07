@@ -1,5 +1,6 @@
 import Video from "assets/heroSectionVideo.mp4";
 import InputField from "components/InputField";
+import Button from "components/Button";
 
 export default function HeroSection() {
   return (
@@ -8,14 +9,15 @@ export default function HeroSection() {
         autoPlay
         loop
         muted
-        className="w-full h-120 top-1/2 left-1/2 object-cover -z-10"
+        className="top-1/2 left-1/2 object-cover -z-10"
+        style={{ width: "100vw", height: "30vw", minHeight: "40vh" }}
       >
         <source src={Video} type="video/mp4" />
       </video>
       {
         // Take a re-look at the inset value
       }
-      <div className="h-full w-full z-10 absolute top-0 inset-1/10 flex items-center">
+      <div className="h-full w-auto z-10 absolute top-0 inset-1/10 flex items-center">
         <div className="">
           <div className="text-white text-4xl text-bold">
             It’s time to unwind
@@ -24,11 +26,13 @@ export default function HeroSection() {
             Enjoy or gift 2,000+ artisan workshops and craft kits
           </div>
           <div className={"rounded-lg bg-gray-100 p-3 mt-8 flex gap-x-4"}>
-            <InputField placeholder="City / Model" width="350px" />
-            <InputField placeholder="Recomendations" />
-            <button className="bg-red-900 text-center rounded-lg w-1/4 text-sm font-semibold text-white px-4 h-14">
-              See Classes
-            </button>
+            <InputField id="city_model" label="City / Model" />
+            <InputField id="recommendation" label="Recommendation" />
+            <Button
+              id="City_Model"
+              label="See Classes"
+              style={{ width: "25%" }}
+            />
           </div>
         </div>
       </div>
