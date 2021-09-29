@@ -5,11 +5,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: "#FDE1DF",
-          400: "#c7376b",
-          500: "#9b305e",
-          900: "#792443",
+          light: "#F18562",
+          DEFAULT: "#FD763F",
+          dark: "#D4653C",
         },
+        secondary: {
+          light: "#FBDB33",
+          DEFAULT: "#D4B50E",
+          dark: "#D0B10D",
+        },
+        yellowOrange: "#FFC091",
       },
       height: {
         120: "480px",
@@ -17,11 +22,15 @@ module.exports = {
       width: {
         100: "400px",
         200: "800px",
+        "screen-1/6": "16.666vw",
       },
       maxWidth: {
         "1/4": "25%",
         "1/2": "50%",
         "3/4": "75%",
+      },
+      minWidth: {
+        50: "200px",
       },
       padding: {
         "px-4.5": "15px",
@@ -35,9 +44,10 @@ module.exports = {
     },
   },
   variants: {
-    // NOT WORKING
     extend: {
-      textColor: ["group-focus"],
+      display: ["group-hover"],
+      transitionDelay: ["group-hover", "hover", "focus"],
+      transitionProperty: ["group-hover", "hover", "focus"],
     },
   },
   plugins: [],

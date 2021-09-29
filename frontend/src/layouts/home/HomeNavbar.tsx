@@ -1,48 +1,59 @@
+// Assests
+import CompanyLogo from "assets/EwentZoneLogo.png";
+// Components
+import Button from "components/Button";
+import InputField from "components/InputField";
+// Icons
+import { RiUserFill, RiUserAddFill } from "react-icons/ri";
+import { MdFavorite } from "react-icons/md";
+import { BiSearchAlt } from "react-icons/bi";
+
 export default function HomeNavbar() {
   return (
     <div className="bg-white">
       <div className="container mx-auto h-24 flex items-center justify-between">
         <a href="#">
-          <img
-            className="w-44 h-10"
-            src="https://classbento.co.uk/images/general/logo/wide-mulberry-classbento-logo-186.png"
-          />
+          <img className="w-auto h-10" src={CompanyLogo} />
         </a>
 
-        <nav className="flex gap-x-8 text-lg font-bold">
+        <InputField
+          id="search"
+          label="Atölye Ara"
+          className="hidden lg:inline w-screen-1/6 min-w-50"
+          icon={<BiSearchAlt size={24} />}
+        />
+
+        <nav className="flex gap-x-8 text-sm font-semibold">
+          <Button id="atolyeleri_incele" label="Atolyeleri İncele" />
+
           <a
             href="#"
-            className="text-opacity-90 text-gray-800 transition-all hover:text-primary-500 hover:text-opacity-100"
+            className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
           >
-            Classes
+            <div>
+              <RiUserFill size={24} />
+            </div>
+            <div className="hidden md:block">Giriş Yap</div>
           </a>
 
           <a
             href="#"
-            className="text-opacity-90 text-gray-800 transition-all hover:text-primary-500 hover:text-opacity-100"
+            className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
           >
-            Gifts
+            <div>
+              <RiUserAddFill size={24} />
+            </div>
+            <div className="hidden md:block">Kayıt Ol</div>
           </a>
 
           <a
             href="#"
-            className="text-opacity-90 text-gray-800 transition-all hover:text-primary-500 hover:text-opacity-100"
+            className="group flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
           >
-            Teach
-          </a>
-
-          <a
-            href="#"
-            className="text-opacity-90 text-gray-800 transition-all hover:text-primary-500 hover:text-opacity-100"
-          >
-            Contact
-          </a>
-
-          <a
-            href="#"
-            className="text-gray-800 text-opacity-90 transition-all hover:text-primary-500 hover:text-opacity-100"
-          >
-            Login
+            <div>
+              <MdFavorite size={24} />
+            </div>
+            <div className="hidden lg:block group-hover:block">Favorilerim</div>
           </a>
         </nav>
       </div>
