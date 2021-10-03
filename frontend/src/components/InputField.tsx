@@ -2,12 +2,13 @@ import { useState } from "react";
 
 export default function InputField(props: {
   id?: string;
-  label: string;
+  type?: string;
+  label?: string;
   style?: object;
   className?: string;
   icon?: any;
 }) {
-  const { id, label, style, className, icon } = props;
+  const { id, type = "string", label = "", style, className, icon } = props;
   const [value, setValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
@@ -15,35 +16,64 @@ export default function InputField(props: {
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
-  const baseClasses = `h-14 ${
-    icon ? "pr-14" + " " + "pl-4" : "px-4"
-  } pt-2 border-2 border-gray-200 rounded-lg bg-blue-50 transition-colors hover:border-primary-500 focus:border-primary-500 outline-none text-sm`;
-  const tailwindClasses =
-    className !== undefined ? className + " " + baseClasses : baseClasses;
+  let baseClasses = "";
+
+  if (icon) {
+    switch (type) {
+      case "number":
+        baseClasses = "pl-14 pr-4";
+        break;
+      default:
+        baseClasses = "pr-14 pl-4";
+        break;
+    }
+  } else {
+    switch (type) {
+      case "number":
+        baseClasses = "px-4";
+        break;
+      default:
+        baseClasses = "px-4";
+        break;
+    }
+  }
 
   return (
     <div
-      className={`flex-initial relative block` + " " + className}
+      className={`flex-initial relative block`}
       onFocus={handleFocus}
       onBlur={handleBlur}
     >
-      <div className="absolute inset-y-0 right-0 px-4 flex items-center">
-        {icon}
-      </div>
+      {icon && (
+        <div
+          className={`absolute inset-y-0 ${
+            type === "number" ? "left" : "right" + "-0"
+          } px-4 flex items-center`}
+        >
+          {icon}
+        </div>
+      )}
+
       <input
         id={id || "inputField"}
+        type={type || ""}
+        min="1"
         value={value}
         onChange={handleChange}
         style={style || {}}
-        className={baseClasses + " " + className}
+        className={"inputField" + " " + baseClasses + " " + className}
       />
       <label
         htmlFor={id || "inputField"}
-        className={`absolute top-0 left-0 px-4 flex items-center transition-all cursor-text
-          ${isFocused || value ? "text-primary" : "text-gray-500"} 
-          ${isFocused || value ? "h-6" : "h-full"}
-          ${isFocused || value ? "text-xs" : ""}
-          `}
+        className={
+          `absolute top-0 left-0 flex items-center transition-all cursor-text
+          ${
+            isFocused || value
+              ? "text-primary h-6 text-xs"
+              : "text-gray-500 h-full"
+          } 
+          ` + baseClasses
+        }
       >
         {label}
       </label>
