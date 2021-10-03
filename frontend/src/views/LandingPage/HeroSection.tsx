@@ -43,7 +43,7 @@ export default function HeroSection() {
       {
         // Take a re-look at the inset value
       }
-      <div className="h-full w-auto z-10 absolute top-0 left-1/10 flex items-center">
+      <div className="h-full w-auto z-10 absolute top-0 left-1/5 flex items-center">
         <div className="">
           <div className="text-gray-800 text-4xl font-bold">
             Zevki Keşfetmenin En Kolay Yolu.
@@ -73,7 +73,7 @@ export default function HeroSection() {
           position: "absolute",
           top: "50%",
           left: "50%",
-          transform: "translate(-18%, -50%)",
+          transform: "translate(-5%, -50%)",
           height: "100%",
           width: "auto",
           overflow: "hidden",

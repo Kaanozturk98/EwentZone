@@ -1,39 +1,34 @@
+// Components
+import RibbonCategory from "components/RibbonCategory";
+
 export default function Ribbon() {
   return (
-    <div className="bg-primary-100 h-20 w-screen">
-      <div
-        className="flex items-center justify-between h-full"
-        style={{ padding: "0 64px" }}
-      >
-        <div className="text-primary text-2xl font-bold">
-          4.8 &#9733; (2,100+ reviews)
-        </div>
-        <div className="flex gap-x-10">
-          <div className="text-primary text-2xl font-bold flex items-center">
-            As seen on
-          </div>
-          <img
-            className="h-10"
-            src="https://classbento.co.uk/images/general/partner_logos/mulberry/this_morning.png"
-          />
-          <img
-            className="h-10"
-            src="https://classbento.co.uk/images/general/partner_logos/mulberry/the_guardian.png"
-          />
-          <img
-            className="h-10"
-            src="https://classbento.co.uk/images/general/partner_logos/mulberry/gq.png"
-          />
-        </div>
-        <div className="flex gap-x-5">
-          <div className="text-primary text-2xl font-bold flex items-center">
-            Supporting
-          </div>
-          <img
-            className="h-16"
-            src="https://classbento.co.uk/images/general/partner_logos/mulberry/mental-health-uk.png"
-          />
-        </div>
+    <div className="bg-primary-100 h-20 w-screen my-6">
+      <div className="h-full flex items-center justify-center gap-x-4">
+        <RibbonCategory
+          label="Sanat"
+          backgroundImage="https://classbento.co.uk/images/general/swirls/150h/03.png"
+        />
+        <RibbonCategory
+          label="Güzellik ve Bakım"
+          backgroundImage="https://classbento.co.uk/images/general/swirls/150h/22.png"
+        />
+        <RibbonCategory
+          label="Mutfak"
+          backgroundImage="https://classbento.co.uk/images/general/swirls/150h/08.png"
+        />
+        <RibbonCategory
+          label="El işi"
+          backgroundImage="	https://classbento.co.uk/images/general/swirls/150h/14.png"
+        />
+        <RibbonCategory
+          label="Çiçekler ve Ağaçlar"
+          backgroundImage="https://classbento.co.uk/images/general/swirls/150h/10.png"
+        />
+        <RibbonCategory
+          label="Kil ve Seramik"
+          backgroundImage="	https://classbento.co.uk/images/general/swirls/150h/05.png"
+        />
       </div>
     </div>
   );
