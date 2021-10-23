@@ -14,7 +14,9 @@ module.exports = {
           DEFAULT: "#D4B50E",
           dark: "#D0B10D",
         },
-        yellowOrange: "#FFC091",
+        yellowOrange: "#f3c19d",
+        lightYellow: "#fdf5e1",
+        brown: { DEFAULT: "#8a5b4c", dark: "#6F473C" },
       },
       height: {
         120: "480px",
