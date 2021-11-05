@@ -17,6 +17,7 @@ module.exports = {
         yellowOrange: "#f3c19d",
         lightYellow: "#fdf5e1",
         brown: { DEFAULT: "#8a5b4c", dark: "#6F473C" },
+        footer: "#413d45",
       },
       height: {
         120: "480px",
@@ -25,6 +26,7 @@ module.exports = {
         "1/8": "12.5%",
         "1/10": "10%",
         100: "400px",
+        125: "500px",
         200: "800px",
         "screen-1/6": "16.666vw",
       },

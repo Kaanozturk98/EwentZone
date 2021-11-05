@@ -32,6 +32,29 @@ import heroSection1 from "assets/heroSection1.jpg";
           backgroundSize: "cover",
         }}
       ></div>
+
+
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: `${100 / 6}%`,
+          height: "100%",
+          width: "auto",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={heroSection1}
+          alt="image"
+          style={{
+            height: "100%",
+            width: "auto",
+            borderRadius: "40%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
       */
 export default function HeroSection() {
   return (
@@ -67,27 +90,6 @@ export default function HeroSection() {
             />
           </div>
         </div>
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: `${100 / 6}%`,
-          height: "100%",
-          width: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={heroSection1}
-          alt="image"
-          style={{
-            height: "100%",
-            width: "auto",
-            borderRadius: "40%",
-            objectFit: "cover",
-          }}
-        />
       </div>
     </div>
   );
