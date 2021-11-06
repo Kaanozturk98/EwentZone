@@ -46,9 +46,11 @@ export default function InputField(props: {
     >
       {icon && (
         <div
-          className={`absolute inset-y-0 ${
-            type === "number" ? "left" : "right" + "-0"
-          } px-4 flex items-center`}
+          className={`absolute inset-y-0 px-4 flex items-center`}
+          style={{
+            left: type === "number" ? 0 : "auto",
+            right: type !== "number" ? 0 : "auto",
+          }}
         >
           {icon}
         </div>
