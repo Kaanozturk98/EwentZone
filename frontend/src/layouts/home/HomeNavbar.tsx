@@ -3,10 +3,13 @@ import CompanyLogo from "assets/EwentZoneLogo.png";
 // Components
 import Button from "components/Button";
 import InputField from "components/InputField";
+import Popup from "components/Popup";
 // Icons
 import { RiUserFill, RiUserAddFill } from "react-icons/ri";
 import { MdFavorite } from "react-icons/md";
 import { BiSearchAlt } from "react-icons/bi";
+// Views
+import SignUp from "views/SignUp";
 
 export default function HomeNavbar() {
   return (
@@ -26,15 +29,14 @@ export default function HomeNavbar() {
         <nav className="flex gap-x-8 text-sm font-semibold">
           <Button id="atolyeleri_incele" label="Atolyeleri İncele" />
 
-          <a
-            href="#"
-            className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
-          >
-            <div>
-              <RiUserFill size={24} />
-            </div>
-            <div className="hidden md:block">Giriş Yap</div>
-          </a>
+          <Popup title="Giriş Yap" body={<SignUp />}>
+            <button className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100">
+              <div>
+                <RiUserFill size={24} />
+              </div>
+              <div className="hidden md:block">Giriş Yap</div>
+            </button>
+          </Popup>
 
           <a
             href="#"

@@ -64,6 +64,12 @@ const routes: { exact: boolean; path: string; layout: FC; component: FC }[] = [
     layout: HomeLayout,
     component: lazy(() => import("views/LandingPage")),
   },
+  {
+    exact: true,
+    path: "/giris-yap",
+    layout: HomeLayout,
+    component: lazy(() => import("views/SignUp")),
+  },
 ];
 
 export default routes;
