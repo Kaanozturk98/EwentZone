@@ -3,7 +3,7 @@ import RibbonCategory from "components/RibbonCategory";
 
 export default function Ribbon() {
   return (
-    <div className="bg-primary-100 h-20 w-screen my-20">
+    <div className="bg-primary-100 h-20 my-20">
       <div className="h-full flex items-center justify-center gap-x-4">
         <RibbonCategory
           label="Sanat"

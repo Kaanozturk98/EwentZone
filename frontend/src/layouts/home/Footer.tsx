@@ -2,7 +2,7 @@ import { FiInstagram, FiFacebook, FiYoutube } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <div className="mt-20 bg-footer w-screen h-34 py-6 px-12">
+    <div className="mt-20 bg-footer h-34 py-6 px-12">
       <div className="flex flex-row justify-between">
         <div className="grid grid-cols-3 xs:grid-cols-8 gap-4 text-xs font-light text-white text-opacity-80 w-125 xs:w-200">
           <a href="#">Hakkımızda</a>

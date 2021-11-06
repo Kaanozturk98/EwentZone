@@ -21,7 +21,7 @@ export default function InputField(props: {
   if (icon) {
     switch (type) {
       case "number":
-        baseClasses = "pl-14 pr-4";
+        baseClasses = "pl-14";
         break;
       default:
         baseClasses = "pr-14 pl-4";
@@ -61,7 +61,7 @@ export default function InputField(props: {
         value={value}
         onChange={handleChange}
         style={style || {}}
-        className={"inputField" + " " + baseClasses + " " + className}
+        className={"inputField pr-4" + " " + baseClasses + " " + className}
       />
       <label
         htmlFor={id || "inputField"}

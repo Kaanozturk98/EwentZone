@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 export default function HomeLayout({ children }: any) {
   return (
-    <div style={{ height: "100%" }}>
+    <div className="w-full">
       <HomeNavbar />
       <div style={{ height: "100%" }}>{children}</div>
       <Footer />

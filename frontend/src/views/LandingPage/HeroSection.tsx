@@ -58,11 +58,10 @@ import heroSection1 from "assets/heroSection1.jpg";
       */
 export default function HeroSection() {
   return (
-    <div className="relative">
-      <div
-        className="top-1/2 left-1/2 object-cover -z-10 bg-yellowOrange"
-        style={{ width: "100vw", height: "30vw", minHeight: "50vh" }}
-      />
+    <div
+      className="relative object-cover -z-10 bg-yellowOrange"
+      style={{ height: "30vw", minHeight: "50vh" }}
+    >
       {
         // Take a re-look at the inset value
       }

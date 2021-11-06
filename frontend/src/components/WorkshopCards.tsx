@@ -1,4 +1,3 @@
-import React from "react";
 import { TiLocation } from "react-icons/ti";
 import { MdLabel } from "react-icons/md";
 import { IoMdStar } from "react-icons/io";
@@ -6,7 +5,10 @@ import { IoMdStar } from "react-icons/io";
 export default function WorkshopCards(props: { src: string }) {
   const { src } = props;
   return (
-    <div className="h-full w-60 rounded-lg bg-lightYellow ">
+    <a
+      href="#"
+      className="h-full w-60 rounded-lg bg-lightYellow cursor-pointer"
+    >
       <img src={src} className="h-72 w-full rounded-t-lg object-cover" />
 
       <div className="flex flex-col p-4 gap-y-4">
@@ -24,6 +26,6 @@ export default function WorkshopCards(props: { src: string }) {
           <div>Workshop Rating</div>
         </p>
       </div>
-    </div>
+    </a>
   );
 }
