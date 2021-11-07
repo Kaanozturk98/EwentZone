@@ -7,12 +7,23 @@ export default function InputField(props: {
   style?: object;
   className?: string;
   icon?: any;
+  name?: string;
+  value: any;
+  onChange: any;
 }) {
-  const { id, type = "string", label = "", style, className, icon } = props;
-  const [value, setValue] = useState("");
+  const {
+    id,
+    type = "text",
+    label = "",
+    style,
+    className,
+    icon,
+    name,
+    value,
+    onChange,
+  } = props;
   const [isFocused, setIsFocused] = useState(false);
 
-  const handleChange = (e: any) => setValue(e.target.value);
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
@@ -60,8 +71,9 @@ export default function InputField(props: {
         id={id || "inputField"}
         type={type || ""}
         min="1"
+        name={name || ""}
         value={value}
-        onChange={handleChange}
+        onChange={onChange}
         style={style || {}}
         className={"inputField pr-4" + " " + baseClasses + " " + className}
       />

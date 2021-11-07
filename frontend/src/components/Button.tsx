@@ -2,18 +2,17 @@ export default function Button(props: {
   id?: string;
   label?: string;
   style?: object;
-  className?: String;
+  className?: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }) {
-  const { id, label, style, className } = props;
-
-  const handleSubmit = () => console.log("submit");
+  const { id, label, style, className, type = "button" } = props;
 
   return (
     <button
       id={id || "button"}
       className={"button" + " " + className}
       style={style || {}}
-      onClick={handleSubmit}
+      type={type}
     >
       {label || ""}
     </button>

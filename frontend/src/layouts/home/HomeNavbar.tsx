@@ -1,3 +1,4 @@
+import { useState } from "react";
 // Assests
 import CompanyLogo from "assets/EwentZoneLogo.png";
 // Components
@@ -12,6 +13,9 @@ import { BiSearchAlt } from "react-icons/bi";
 import SignUp from "views/SignUp";
 
 export default function HomeNavbar() {
+  const [searchInput, setSearchInput] = useState("");
+  const handleChange = (e: any) => setSearchInput(e.target.value);
+
   return (
     <div className="bg-white">
       <div className="container mx-auto h-24 flex items-center justify-between">
@@ -20,10 +24,12 @@ export default function HomeNavbar() {
         </a>
 
         <InputField
-          id="search"
+          id="ara"
           label="Atölye Ara"
           className="hidden lg:inline w-screen-1/6 min-w-50"
           icon={<BiSearchAlt size={24} />}
+          value={searchInput}
+          onChange={handleChange}
         />
 
         <nav className="flex gap-x-8 text-sm font-semibold">
@@ -38,15 +44,14 @@ export default function HomeNavbar() {
             </button>
           </Popup>
 
-          <a
-            href="#"
-            className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
-          >
-            <div>
-              <RiUserAddFill size={24} />
-            </div>
-            <div className="hidden md:block">Kayıt Ol</div>
-          </a>
+          <Popup title="Kayıt Ol" body={<SignUp />}>
+            <button className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100">
+              <div>
+                <RiUserAddFill size={24} />
+              </div>
+              <div className="hidden md:block">Kayıt Ol</div>
+            </button>
+          </Popup>
 
           <a
             href="#"
