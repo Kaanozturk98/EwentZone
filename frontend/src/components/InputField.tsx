@@ -22,6 +22,7 @@ export default function InputField(props: {
     value,
     onChange,
   } = props;
+
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => setIsFocused(true);
