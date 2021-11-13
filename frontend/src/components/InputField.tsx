@@ -15,7 +15,7 @@ export default function InputField(props: {
     id,
     type = "text",
     label = "",
-    style,
+    style = {},
     className,
     icon,
     name,
@@ -75,7 +75,7 @@ export default function InputField(props: {
         name={name || ""}
         value={value}
         onChange={onChange}
-        style={style || {}}
+        style={style}
         className={"inputField pr-4" + " " + baseClasses + " " + className}
       />
       <label

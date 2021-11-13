@@ -11,7 +11,7 @@ export default function SignUp() {
     initialValues: {
       name: "",
       email: "",
-      gender: [],
+      gender: "",
       phoneNumber: { code: "TR", number: "" },
       password: "",
       emailUpdates: false,
@@ -33,6 +33,7 @@ export default function SignUp() {
             onChange={formik.handleChange}
             value={formik.values.name}
           />
+
           <InputField
             id="email"
             label="Email"
@@ -41,6 +42,7 @@ export default function SignUp() {
             onChange={formik.handleChange}
             value={formik.values.email}
           />
+
           <PhoneNumberField
             formik={formik}
             selected={formik.values.phoneNumber.code}
@@ -48,16 +50,22 @@ export default function SignUp() {
               formik.setFieldValue("phoneNumber.code", code)
             }
           />
+
           <SelectField
             options={[
               { value: "erkek", label: "Erkek" },
               { value: "kadın", label: "Kadın" },
             ]}
-            onChange={(value: string) =>
-              formik.setFieldValue("gender", [value])
+            onChange={(e: any) =>
+              formik.setFieldValue("gender", e.target.value)
             }
-            values={formik.values.gender}
+            value={formik.values.gender}
+            name="gender"
+            id="cinsiyet"
+            label="Cinsiyet"
+            style={{ width: "416px" }}
           />
+
           <Button
             id="kayıt_ol"
             type="submit"

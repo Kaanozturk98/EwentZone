@@ -11,6 +11,7 @@ import { MdFavorite } from "react-icons/md";
 import { BiSearchAlt } from "react-icons/bi";
 // Views
 import SignUp from "views/SignUp";
+import SignIn from "views/SignIn";
 
 export default function HomeNavbar() {
   const [searchInput, setSearchInput] = useState("");
@@ -35,7 +36,7 @@ export default function HomeNavbar() {
         <nav className="flex gap-x-8 text-sm font-semibold">
           <Button id="atolyeleri_incele" label="Atolyeleri İncele" />
 
-          <Popup title="Giriş Yap" body={<SignUp />}>
+          <Popup title="Giriş Yap" body={<SignIn />}>
             <button className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100">
               <div>
                 <RiUserFill size={24} />
