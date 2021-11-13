@@ -4,59 +4,7 @@ import InputField from "components/InputField";
 import Button from "components/Button";
 // Icons
 import { HiUserGroup } from "react-icons/hi";
-// Image
-import heroSection1 from "assets/heroSection1.jpg";
-/*
- <img
-          src={heroSection1}
-          alt="image"
-          style={{
-            height: "100%",
-            width: "auto",
-            borderRadius: "50%",
-            objectFit: "cover",
-          }}
-        />
 
-
-      <div
-        style={{
-          height: "110%",
-          width: "auto",
-          borderRadius: "50%",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-12%, -50%)",
-          backgroundImage: `url(${heroSection1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      ></div>
-
-
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: `${100 / 6}%`,
-          height: "100%",
-          width: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={heroSection1}
-          alt="image"
-          style={{
-            height: "100%",
-            width: "auto",
-            borderRadius: "40%",
-            objectFit: "cover",
-          }}
-        />
-      </div>
-      */
 export default function HeroSection() {
   const formik = useFormik({
     initialValues: {
@@ -85,7 +33,7 @@ export default function HeroSection() {
             Onlarca farklı atölyenin keyfini çıkar!
           </div>
           <form onSubmit={formik.handleSubmit}>
-            <div className="rounded-lg bg-gray-100 p-3 mt-8 flex gap-x-4">
+            <div className="w-125 rounded-lg bg-gray-100 p-3 mt-8 flex gap-x-4">
               <InputField
                 id="sehir"
                 label="Şehir"
