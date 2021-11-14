@@ -3,7 +3,6 @@ const {
   prettify_dates,
   validate_query,
   error_handler,
-  sanitize_content,
 } = require("../helpers");
 const _ = require("underscore");
 const { ObjectId } = require("bson");

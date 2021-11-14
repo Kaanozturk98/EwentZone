@@ -1,6 +1,11 @@
-import express from "express";
-import { LIST, CREATE, UPDATE, DELETE } from "../controllers/ModelController";
-import WorkshopModel from "../models/Workshops";
+const express = require("express");
+const {
+  LIST,
+  CREATE,
+  UPDATE,
+  DELETE,
+} = require("../controllers/ModelController");
+const WorkshopModel = require("../models/Workshops");
 
 const router = express.Router();
 

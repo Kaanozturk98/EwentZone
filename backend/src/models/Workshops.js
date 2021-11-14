@@ -1,15 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
-interface Workshop {
-  name: string;
-  slug: string;
-  city: string;
-  price: number;
-  rating: number;
-}
-
-const WorkshopsSchema = new Schema<Workshop>({
+const WorkshopsSchema = new Schema({
   name: { type: String, required: true },
   slug: {
     type: String,
@@ -24,5 +16,4 @@ const WorkshopsSchema = new Schema<Workshop>({
   rating: { type: Number, required: true },
 });
 
-const WorkshopModel = model<Workshop>("Workshop", WorkshopsSchema);
-export default WorkshopModel;
+module.exports = WorkshopModel = model("Workshop", WorkshopsSchema);

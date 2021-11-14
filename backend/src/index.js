@@ -1,10 +1,10 @@
 // Loading ENV Variables with dotenv
 require("dotenv").config();
-import express, { Request, Response } from "express";
-import morganBody from "morgan-body";
-import helmet from "helmet";
-import cors from "cors";
-import mongoose from "mongoose";
+const express = require("express");
+const morganBody = require("morgan-body");
+const helmet = require("helmet");
+const cors = require("cors");
+const mongoose = require("mongoose");
 
 // Loading Express
 const app = express();
@@ -18,7 +18,7 @@ app.use(express.json());
 
 if (!process.env.DEVELOPMENT) morganBody(app, { noColors: true });
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   return res.status(200).json({ message: "Health Check" });
 });
 
