@@ -41,6 +41,7 @@ module.exports = {
         25: "100px",
         32: "128px",
         50: "200px",
+        60: "240px",
       },
       padding: {
         "px-4.5": "15px",
