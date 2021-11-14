@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 // Import Routes
-const workshops = require("./routes/workshops");
+const workshops = require("./routes/Workshops");
 
 app.use(cors());
 app.use(helmet());
