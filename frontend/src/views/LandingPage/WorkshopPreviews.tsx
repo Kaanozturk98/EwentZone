@@ -55,8 +55,8 @@ export default function WorkshopPreviews() {
   */
 
   return (
-    <div className="h-auto my-20 mx-10">
-      <div className="text-gray-800 text-4xl font-bold mb-8">
+    <div className="container mx-auto h-auto my-20">
+      <div className="text-spaceShuttle text-4xl font-bold mb-8">
         Popüler Atölyeler
       </div>
       <div className="h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

@@ -18,7 +18,7 @@ export default function HomeNavbar() {
   const handleChange = (e: any) => setSearchInput(e.target.value);
 
   return (
-    <div className="bg-white">
+    <div className="bg-babyPowder">
       <div className="container mx-auto h-24 flex items-center justify-between">
         <a href="#">
           <img className="w-auto h-10" src={CompanyLogo} />
@@ -27,8 +27,8 @@ export default function HomeNavbar() {
         <InputField
           id="ara"
           label="Atölye Ara"
-          className="hidden lg:inline w-screen-1/6 min-w-50"
-          icon={<BiSearchAlt size={24} />}
+          className="hidden lg:inline w-screen-1/6 min-w-50 bg-woodSmoke"
+          icon={<BiSearchAlt size={24} className="text-primary" />}
           value={searchInput}
           onChange={handleChange}
         />
@@ -37,18 +37,18 @@ export default function HomeNavbar() {
           <Button id="atolyeleri_incele" label="Atolyeleri İncele" />
 
           <Popup title="Giriş Yap" body={<SignIn />}>
-            <button className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100">
+            <button className="flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100">
               <div>
-                <RiUserFill size={24} />
+                <RiUserFill size={24} className="text-primary" />
               </div>
               <div className="hidden md:block">Giriş Yap</div>
             </button>
           </Popup>
 
           <Popup title="Kayıt Ol" body={<SignUp />}>
-            <button className="flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100">
+            <button className="flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100">
               <div>
-                <RiUserAddFill size={24} />
+                <RiUserAddFill size={24} className="text-primary" />
               </div>
               <div className="hidden md:block">Kayıt Ol</div>
             </button>
@@ -56,10 +56,10 @@ export default function HomeNavbar() {
 
           <a
             href="#"
-            className="group flex items-center gap-x-2 text-opacity-90 text-gray-600 transition-all hover:text-gray-700 hover:text-opacity-100"
+            className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100"
           >
             <div>
-              <MdFavorite size={24} />
+              <MdFavorite size={24} className="text-primary" />
             </div>
             <div className="hidden lg:block group-hover:block">Favorilerim</div>
           </a>

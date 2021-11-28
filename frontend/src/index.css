@@ -11,16 +11,16 @@
     font-family: "Inter", sans-serif;
   }
   .button {
-    @apply bg-red-400 text-center rounded-lg text-sm font-semibold text-white px-4 h-14 transition-colors hover:bg-primary-dark;
+    @apply bg-spanishBlue text-center rounded-lg text-sm font-semibold text-babyPowder px-4 h-14 transition-colors hover:bg-primary-dark;
   }
   .inputField {
-    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-white transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm;
+    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-babyPowder transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm;
   }
   .flag-select button {
-    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-white transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm w-32;
+    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-babyPowder transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm w-32;
   }
 
   .select-field {
-    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-white transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm;
+    @apply h-14 pt-2 border-2 border-gray-200 rounded-lg bg-babyPowder transition-colors hover:border-primary-dark focus:border-primary-dark outline-none text-sm;
   }
 }

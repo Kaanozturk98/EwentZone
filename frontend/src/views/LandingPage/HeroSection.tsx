@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <div className="relative">
       <div
-        className="top-1/2 left-1/2 object-cover -z-10 bg-yellowOrange"
+        className="top-1/2 left-1/2 object-cover -z-10 bg-gray-400"
         style={{ height: "30vw", minHeight: "50vh" }}
       />
       {
@@ -26,14 +26,14 @@ export default function HeroSection() {
       }
       <div className="h-full w-auto z-10 absolute top-0 left-1/6 flex items-center">
         <div className="">
-          <div className="text-gray-800 text-4xl font-bold">
+          <div className="text-gray-700 text-4xl font-bold">
             Zevki Keşfetmenin En Kolay Yolu.
           </div>
-          <div className="text-gray-700 text-xl font-bold mt-8">
+          <div className="text-spaceShuttle text-xl font-bold mt-8">
             Onlarca farklı atölyenin keyfini çıkar!
           </div>
           <form onSubmit={formik.handleSubmit}>
-            <div className="w-125 rounded-lg bg-gray-100 p-3 mt-8 flex gap-x-4">
+            <div className="w-125 rounded-lg bg-woodSmoke p-3 mt-8 flex gap-x-4">
               <InputField
                 id="sehir"
                 label="Şehir"
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 label="Sayı"
                 type="number"
                 name="personCount"
-                icon={<HiUserGroup size={24} />}
+                icon={<HiUserGroup size={24} className="text-spaceShuttle" />}
                 style={{ maxWidth: "124px" }}
                 onChange={formik.handleChange}
                 value={formik.values.personCount}

@@ -6,19 +6,19 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: "#F18562",
-          DEFAULT: "#FD763F",
-          dark: "#D4653C",
+          light: "#F28454",
+          DEFAULT: "#EE6123",
+          dark: "#D14A10",
         },
         secondary: {
-          light: "#FBDB33",
-          DEFAULT: "#D4B50E",
-          dark: "#D0B10D",
+          light: "#FFDA33",
+          DEFAULT: "#FFCF00",
+          dark: "#EOB700",
         },
-        yellowOrange: "#f3c19d",
-        lightYellow: "#fdf5e1",
-        brown: { DEFAULT: "#8a5b4c", dark: "#6F473C" },
-        footer: "#413d45",
+        babyPowder: "#FDFFFC",
+        spaceShuttle: "#413d45",
+        spanishBlue: "#246EB9",
+        woodSmoke: "#F5F2ED",
       },
       height: {
         120: "480px",

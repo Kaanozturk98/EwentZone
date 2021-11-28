@@ -6,7 +6,7 @@ export default function RibbonCategory(props: {
 
   return (
     <div
-      className="h-20 max-w-40 w-1/8 min-w-32 rounded-lg bg-gray-400 bg-image flex items-center justify-between cursor-pointer"
+      className="h-20 max-w-40 w-1/8 min-w-32 rounded-lg bg-image flex items-center justify-between cursor-pointer"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "right center",
@@ -14,7 +14,7 @@ export default function RibbonCategory(props: {
         backgroundSize: "cover",
       }}
     >
-      <span className="w-full text-center text-white text-xl font-bold">
+      <span className="w-full text-center text-babyPowder text-xl font-bold">
         {label}
       </span>
     </div>
