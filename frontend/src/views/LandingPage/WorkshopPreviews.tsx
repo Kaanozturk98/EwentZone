@@ -15,7 +15,7 @@ export default function WorkshopPreviews() {
   ];
 
   const numberOfCards =
-    Math.floor((useWindowDimensions().width - (160 + 36)) / 256) * 3;
+    (Math.floor((useWindowDimensions().width - (160 + 36)) / 256) || 1) * 3;
 
   function makeArr(startValue: number, stopValue: number, cardinality: number) {
     var arr = [];
@@ -26,40 +26,19 @@ export default function WorkshopPreviews() {
     return arr;
   }
 
-  /*
-  (
-    <div className="my-20 h-120">
-      <div className="h-full flex items-center justify-center gap-x-4">
-        {makeArr(0, numberOfCards - 1, numberOfCards).map((idx) => (  
-          <WorkshopCards
-            src={
-              srcArray[
-                idx - Math.floor(idx / srcArray.length) * srcArray.length
-              ]
-            }
-          />
-        ))}
-
-        <div className="h-full w-40 flex items-center justify-center">
-          <a
-            href=""
-            className="flex flex-col items-center cursor-pointer text-primary-dark"
-          >
-            <RiArrowRightSLine size={128} />
-            <div>Daha Fazlasını Gör</div>
-          </a>
-        </div>
-      </div>
-    </div>
+  console.log(
+    "card #",
+    makeArr(0, numberOfCards - 1, numberOfCards),
+    numberOfCards,
+    useWindowDimensions().width - (160 + 36)
   );
-  */
 
   return (
-    <div className="container mx-auto h-auto my-20">
+    <div className="xl:container mx-6 xl:mx-auto h-auto my-20">
       <div className="text-spaceShuttle text-4xl font-bold mb-8">
         Popüler Atölyeler
       </div>
-      <div className="h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="h-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {makeArr(0, numberOfCards - 1, numberOfCards).map((idx) => (
           <WorkshopCards
             src={

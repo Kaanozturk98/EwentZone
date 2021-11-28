@@ -3,8 +3,8 @@ import RibbonCategory from "components/RibbonCategory";
 
 export default function Ribbon() {
   return (
-    <div className="bg-primary-100 h-20 my-20">
-      <div className="h-full flex items-center justify-center gap-x-4">
+    <div className="bg-primary-100 h-20 mt-20 mb-64 md:my-24">
+      <div className="h-full lg:container px-4 xl:mx-auto grid grid-cols-2 md:grid-cols-6 gap-x-4 gap-y-4">
         <RibbonCategory
           label="Sanat"
           backgroundImage="https://classbento.co.uk/images/general/swirls/150h/03.png"

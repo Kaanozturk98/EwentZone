@@ -29,16 +29,16 @@ export default function HeroSection() {
       {
         // Take a re-look at the inset value
       }
-      <div className="h-full w-auto z-10 absolute top-0 left-1/6 flex items-center">
+      <div className="h-full w-auto z-10 absolute top-0 left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:left-1/10 flex items-center">
         <div className="">
-          <div className="text-gray-700 text-4xl font-bold">
+          <div className="text-gray-700 text-2xl lg:text-4xl font-bold">
             Zevki Keşfetmenin En Kolay Yolu.
           </div>
-          <div className="text-spaceShuttle text-xl font-bold mt-8">
+          <div className="text-spaceShuttle text-lg lg:text-xl font-bold mt-4 lg:mt-8">
             Onlarca farklı atölyenin keyfini çıkar!
           </div>
           <form onSubmit={formik.handleSubmit}>
-            <div className="w-125 rounded-lg bg-woodSmoke p-3 mt-8 flex gap-x-4">
+            <div className="hidden w-125 rounded-lg bg-woodSmoke p-3 mt-4 lg:mt-8 md:flex gap-x-4">
               <InputField
                 id="sehir"
                 label="Şehir"

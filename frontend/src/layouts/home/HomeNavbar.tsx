@@ -19,7 +19,7 @@ export default function HomeNavbar() {
 
   return (
     <div className="bg-babyPowder">
-      <div className="container mx-auto h-24 flex items-center justify-between">
+      <div className="xl:container mx-6 xl:mx-auto h-24 flex items-center justify-between">
         <a href="#">
           <img className="w-auto h-5" src={CompanyLogo} />
         </a>
@@ -27,36 +27,43 @@ export default function HomeNavbar() {
         <InputField
           id="ara"
           label="Atölye Ara"
-          className="hidden lg:inline w-screen-1/6 min-w-50 bg-woodSmoke"
+          className={{
+            parent: "hidden md:block",
+            input: "w-full min-w-50 bg-woodSmoke",
+          }}
           icon={<BiSearchAlt size={24} className="text-primary" />}
           value={searchInput}
           onChange={handleChange}
         />
 
         <nav className="flex gap-x-8 text-sm font-semibold">
-          <Button id="atolyeleri_incele" label="Atolyeleri İncele" />
+          <Button
+            className="hidden lg:inline"
+            id="atolyeleri_incele"
+            label="Atolyeleri İncele"
+          />
 
           <Popup title="Giriş Yap" body={<SignIn />}>
-            <button className="flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100">
+            <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
               <div>
                 <RiUserFill size={24} className="text-primary" />
               </div>
-              <div className="hidden md:block">Giriş Yap</div>
-            </button>
+              <div className="hidden md:block group-hover:block">Giriş Yap</div>
+            </a>
           </Popup>
 
           <Popup title="Kayıt Ol" body={<SignUp />}>
-            <button className="flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100">
+            <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
               <div>
                 <RiUserAddFill size={24} className="text-primary" />
               </div>
-              <div className="hidden md:block">Kayıt Ol</div>
-            </button>
+              <div className="hidden md:block group-hover:block">Kayıt Ol</div>
+            </a>
           </Popup>
 
           <a
             href="#"
-            className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100"
+            className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer"
           >
             <div>
               <MdFavorite size={24} className="text-primary" />

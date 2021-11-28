@@ -5,7 +5,7 @@ export default function InputField(props: {
   type?: string;
   label?: string;
   style?: object;
-  className?: string;
+  className?: { parent?: string; input?: string };
   icon?: any;
   name?: string;
   value: any;
@@ -16,7 +16,7 @@ export default function InputField(props: {
     type = "text",
     label = "",
     style = {},
-    className,
+    className = { parent: "", input: "" },
     icon,
     name,
     value,
@@ -28,31 +28,31 @@ export default function InputField(props: {
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
-  let baseClasses = "";
+  let propEffectedClassNames = "";
 
   if (icon) {
     switch (type) {
       case "number":
-        baseClasses = "pl-14";
+        propEffectedClassNames = "pl-14";
         break;
       default:
-        baseClasses = "pr-14 pl-4";
+        propEffectedClassNames = "pr-14 pl-4";
         break;
     }
   } else {
     switch (type) {
       case "number":
-        baseClasses = "px-4";
+        propEffectedClassNames = "px-4";
         break;
       default:
-        baseClasses = "px-4";
+        propEffectedClassNames = "px-4";
         break;
     }
   }
 
   return (
     <div
-      className={`flex-initial relative block`}
+      className={`flex-initial relative` + " " + className?.parent}
       onFocus={handleFocus}
       onBlur={handleBlur}
     >
@@ -76,8 +76,15 @@ export default function InputField(props: {
         value={value}
         onChange={onChange}
         style={style}
-        className={"inputField pr-4" + " " + baseClasses + " " + className}
+        className={
+          "inputField pr-4" +
+          " " +
+          propEffectedClassNames +
+          " " +
+          className?.input
+        }
       />
+
       <label
         htmlFor={id || "inputField"}
         className={
@@ -85,9 +92,9 @@ export default function InputField(props: {
           ${
             isFocused || value
               ? "text-primary h-6 text-xs"
-              : "text-gray-500 h-full"
+              : "text-gray-500 h-full w-full"
           } 
-          ` + baseClasses
+          ` + propEffectedClassNames
         }
       >
         {label}
