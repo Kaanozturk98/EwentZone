@@ -17,7 +17,11 @@ module.exports = {
         },
         babyPowder: "#FDFFFC",
         spaceShuttle: "#413d45",
-        spanishBlue: "#246EB9",
+        spanishBlue: {
+          light: "287ACF",
+          DEFAULT: "#246EB9",
+          dark: "#2061A4",
+        },
         woodSmoke: "#F5F2ED",
         cream: "#FAF6F4",
       },
