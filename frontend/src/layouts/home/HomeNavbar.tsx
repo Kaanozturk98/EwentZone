@@ -1,6 +1,6 @@
 import { useState } from "react";
 // Assests
-import CompanyLogo from "assets/EwentZoneLogo.png";
+import CompanyLogo from "assets/EwentZone.png";
 // Components
 import Button from "components/Button";
 import InputField from "components/InputField";
@@ -21,7 +21,7 @@ export default function HomeNavbar() {
     <div className="bg-babyPowder">
       <div className="container mx-auto h-24 flex items-center justify-between">
         <a href="#">
-          <img className="w-auto h-10" src={CompanyLogo} />
+          <img className="w-auto h-5" src={CompanyLogo} />
         </a>
 
         <InputField
