@@ -19,6 +19,7 @@ module.exports = {
         spaceShuttle: "#413d45",
         spanishBlue: "#246EB9",
         woodSmoke: "#F5F2ED",
+        cream: "#FAF6F4",
       },
       height: {
         120: "480px",

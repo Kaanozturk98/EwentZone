@@ -18,8 +18,13 @@ export default function HeroSection() {
   return (
     <div className="relative">
       <div
-        className="top-1/2 left-1/2 object-cover -z-10 bg-gray-400"
-        style={{ height: "30vw", minHeight: "50vh" }}
+        className="top-1/2 left-1/2 object-cover -z-10 bg-cream"
+        style={{
+          height: "30vw",
+          minHeight: "50vh",
+          background:
+            "linear-gradient(90deg, rgba(238,97,35,0.5) 0%, rgba(255,207,0,0.5) 50%, rgba(252,176,69,0) 100%)",
+        }}
       />
       {
         // Take a re-look at the inset value
