@@ -2,15 +2,19 @@ import { useFormik } from "formik";
 // Components
 import InputField from "components/InputField";
 import Button from "components/Button";
+import useAuth from "guards/authProvider";
 
 export default function SignUp() {
+  const { login } = useAuth();
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      //alert(JSON.stringify(values, null, 2));
+      login(values);
     },
   });
 

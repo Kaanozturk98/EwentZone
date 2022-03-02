@@ -3,21 +3,23 @@ import { useFormik } from "formik";
 import InputField from "components/InputField";
 import Button from "components/Button";
 import PhoneNumberField from "components/PhoneNumberField";
-import Checkbox from "components/Checkbox";
 import SelectField from "components/SelectField";
+import useAuth from "guards/authProvider";
 
 export default function SignUp() {
+  const { signUp } = useAuth();
+
   const formik = useFormik({
     initialValues: {
       name: "",
-      email: "",
       gender: "",
       phoneNumber: { code: "TR", number: "" },
+      email: "",
       password: "",
-      emailUpdates: false,
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      //alert(JSON.stringify(values, null, 2));
+      signUp(values);
     },
   });
 
@@ -34,15 +36,6 @@ export default function SignUp() {
             value={formik.values.name}
           />
 
-          <InputField
-            id="email"
-            label="Email"
-            style={{ width: "416px" }}
-            name="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-          />
-
           <PhoneNumberField
             formik={formik}
             selected={formik.values.phoneNumber.code}
@@ -53,6 +46,7 @@ export default function SignUp() {
 
           <SelectField
             options={[
+              { value: "", label: "" },
               { value: "erkek", label: "Erkek" },
               { value: "kadın", label: "Kadın" },
             ]}
@@ -64,6 +58,24 @@ export default function SignUp() {
             id="cinsiyet"
             label="Cinsiyet"
             style={{ width: "416px" }}
+          />
+
+          <InputField
+            id="email"
+            label="Email"
+            style={{ width: "416px" }}
+            name="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+          />
+
+          <InputField
+            id="password"
+            label="Şifre"
+            style={{ width: "416px" }}
+            name="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
           />
 
           <Button

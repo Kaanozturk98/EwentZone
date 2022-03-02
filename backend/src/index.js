@@ -11,6 +11,8 @@ const app = express();
 
 // Import Routes
 const workshops = require("./routes/Workshops");
+const auth = require("./routes/Auth");
+const users = require("./routes/User");
 
 app.use(cors());
 app.use(helmet());
@@ -26,7 +28,7 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://kaanozturk:kaan1998@development.ytdje.mongodb.net/EwentZone?retryWrites=true&w=majority"
+    "mongodb+srv://ewentzone2022:Ewentzone1-@ewentzone.eip1l.mongodb.net/production?retryWrites=true&w=majority"
   );
 
   const port = process.env.PORT || 4000;
@@ -36,4 +38,6 @@ async function main() {
 
   // Use routes
   app.use("/workshops", workshops);
+  app.use("/auth", auth);
+  app.use("/users", users);
 }
