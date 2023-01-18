@@ -48,23 +48,55 @@ export default function HomeNavbar() {
             label="Atolyeleri İncele"
           />
 
-          <Popup title="Giriş Yap" body={<SignIn />}>
-            <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
-              <div>
-                <RiUserFill size={24} className="text-primary" />
-              </div>
-              <div className="hidden md:block group-hover:block">Giriş Yap</div>
-            </a>
-          </Popup>
+          {user ? (
+            <>
+              <Popup title="Profilim" body={<SignIn />}>
+                <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
+                  <div>
+                    <RiUserFill size={24} className="text-primary" />
+                  </div>
+                  <div className="hidden md:block group-hover:block">
+                    {user.name}
+                  </div>
+                </a>
+              </Popup>
 
-          <Popup title="Kayıt Ol" body={<SignUp />}>
-            <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
-              <div>
-                <RiUserAddFill size={24} className="text-primary" />
-              </div>
-              <div className="hidden md:block group-hover:block">Kayıt Ol</div>
-            </a>
-          </Popup>
+              <Popup title="Sepetim" body={<SignUp />}>
+                <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
+                  <div>
+                    <RiUserAddFill size={24} className="text-primary" />
+                  </div>
+                  <div className="hidden md:block group-hover:block">
+                    Sepetim
+                  </div>
+                </a>
+              </Popup>
+            </>
+          ) : (
+            <>
+              <Popup title="Giriş Yap" body={<SignIn />}>
+                <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
+                  <div>
+                    <RiUserFill size={24} className="text-primary" />
+                  </div>
+                  <div className="hidden md:block group-hover:block">
+                    Giriş Yap
+                  </div>
+                </a>
+              </Popup>
+
+              <Popup title="Kayıt Ol" body={<SignUp />}>
+                <a className="group flex items-center gap-x-2 text-opacity-90 text-spaceShuttle transition-all hover:text-spaceShuttle hover:text-opacity-100 cursor-pointer">
+                  <div>
+                    <RiUserAddFill size={24} className="text-primary" />
+                  </div>
+                  <div className="hidden md:block group-hover:block">
+                    Kayıt Ol
+                  </div>
+                </a>
+              </Popup>
+            </>
+          )}
 
           <a
             href="#"
