@@ -14,6 +14,7 @@ import SignUp from "views/SignUp";
 import SignIn from "views/SignIn";
 import useAuth from "guards/authProvider";
 
+
 export default function HomeNavbar() {
   const { user } = useAuth();
 
